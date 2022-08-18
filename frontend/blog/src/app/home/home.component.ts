@@ -28,8 +28,13 @@ export class HomeComponent implements OnInit {
       console.log("ACTIVATE")
     }
 
-    this.api.UserInfo().subscribe(resposne => {
-      this.userRole = resposne.role
+    this.api.UserInfo().subscribe({
+      next: resposne => {
+        this.userRole = resposne.role
+      },
+      error: error => {
+        this.router.navigate(["login"])
+      }
     })
 
     this.updatePosts()

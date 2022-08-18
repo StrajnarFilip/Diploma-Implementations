@@ -1,7 +1,12 @@
 <div class="container" fxLayout="column" fxLayoutGap="1em">
-    <h2 routerLink="/">
-        <mat-icon>home</mat-icon>
-    </h2>
+    <div fxLayout="row" fxLayoutGap="3em">
+        <h2 routerLink="/">
+            <mat-icon>home</mat-icon>
+        </h2>
+        <h2 routerLink="/register">
+            <mat-icon>person_add</mat-icon>
+        </h2>
+    </div>
 
     <router-outlet></router-outlet>
     <mat-icon (click)="logout()">logout</mat-icon>
