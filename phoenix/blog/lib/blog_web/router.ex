@@ -12,12 +12,13 @@ defmodule BlogWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+
   end
 
   scope "/", BlogWeb do
     pipe_through :api
     # Comments
-    get "/post-comments/:post_id", CommentController, :show_post_comments
+    get "/post-comments/:id", CommentController, :show_post_comments
     post "/comment", CommentController, :create
     delete "/comment/:id", CommentController, :delete
 

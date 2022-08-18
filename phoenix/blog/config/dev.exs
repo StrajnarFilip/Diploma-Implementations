@@ -6,7 +6,7 @@ config :blog, Blog.Repo,
   password: "f5da15f2addf6857266afd80d19bd20da241f8bf334af04f",
   hostname: "localhost",
   database: "postgres",
-  port: 54321,
+  port: 5433,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
