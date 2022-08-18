@@ -1,7 +1,7 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, comment } from "@prisma/client";
 import { Express } from "express"
 import { TextComment } from "../../models/TextComment";
-import { bigIntToNumber,prismaClient } from "../../utility";
+import { bigIntToNumber, prismaClient } from "../../utility";
 
 export async function getPostComments(app: Express) {
     app.get("/post-comments/:id", async (req, res) => {
@@ -14,7 +14,7 @@ export async function getPostComments(app: Express) {
             }
         })
 
-        const reshapedComments: TextComment[] = comments.map(comment => {
+        const reshapedComments: TextComment[] = comments.map((comment: comment) => {
             if (comment.idcomment !== null &&
                 comment.post_idpost !== null &&
                 comment.user_iduser !== null) {

@@ -1,4 +1,3 @@
-import { PrismaClient, Prisma } from "@prisma/client"
 import express from "express"
 import { deleteComment } from "./endpoints/comment/delete-comment"
 import { getPostComments } from "./endpoints/comment/get-post-comments"

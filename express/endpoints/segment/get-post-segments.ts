@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, segment } from "@prisma/client";
 import { Express } from "express"
 import { IdResponse } from "../../models/IdResponse";
 import { Segment } from "../../models/Segment";
@@ -16,7 +16,7 @@ export async function getSegments(app: Express) {
             }
         })
 
-        const reshapedSegments: Segment[] = segments.map(segment => {
+        const reshapedSegments: Segment[] = segments.map((segment: segment) => {
             return {
                 idsegment: bigIntToNumber(segment.idsegment),
                 postIdpost: bigIntToNumber(segment.post_idpost),
