@@ -1,0 +1,39 @@
+????[HttpGet("/comment/{id}")]???
+[HttpGet("/post-comments/{id}")]
+[HttpPost("/comment")]
+[HttpDelete("/comment/{id}")]
+
+[HttpGet("/hyperlink/{id}")]
+[HttpPost("/hyperlink")]
+[HttpDelete("/hyperlink/{id}")]
+
+[HttpGet("/image/{id}")]
+[HttpPost("/image")]
+[HttpDelete("/image/{id}")]
+
+[HttpGet("/nodes/{id}")]
+
+[HttpGet("/posts")]
+[HttpGet("/post/{id}")]
+[HttpPost("/post")]
+[HttpDelete("/post/{id}")]
+
+[HttpGet("/text/{id}")]
+[HttpPost("/text")]
+[HttpDelete("/text/{id}")]
+
+[HttpPost("/login")]
+[HttpPost("/register")]
+[HttpGet("/user-information")
+[HttpPost("/logout")]
+
+
+import { PrismaClient } from "@prisma/client";
+import { Express } from "express"
+
+export async function (app: Express) {
+    app.get(,async (req, res) => {
+        res.json(?????)  
+    })
+
+}

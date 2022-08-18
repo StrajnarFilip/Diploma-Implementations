@@ -55,7 +55,7 @@ export class ApiService {
     if (this.storage.token === null) {
       throw Error("Token is null")
     }
-    return this.http.post<TextComment>(`${this.baseAddress}/segment`,
+    return this.http.post<Segment>(`${this.baseAddress}/segment`,
       newSegment, { headers: { Authorization: this.storage.token } })
   }
 
