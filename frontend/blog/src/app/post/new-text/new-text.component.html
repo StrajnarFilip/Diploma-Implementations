@@ -1,0 +1,7 @@
+<p>New text</p>
+<mat-form-field style="width: 100%;" appearance="fill">
+    <mat-label>Content</mat-label>
+    <textarea [rows]="10" matInput [(ngModel)]="content" ></textarea>
+</mat-form-field>
+<br>
+<button mat-raised-button color="primary" (click)="submit()">Submit</button>

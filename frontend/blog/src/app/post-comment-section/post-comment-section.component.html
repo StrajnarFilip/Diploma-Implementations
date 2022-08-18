@@ -1,0 +1,13 @@
+<h2>Comments</h2>
+<div fxLayoutGap fxLayout="column" fxLayoutAlign="space-around" fxLayoutGap="1em">
+    <mat-card *ngFor="let comment of comments">
+        <div>{{comment.content}}</div>
+        <mat-icon *ngIf="userId == comment.userIduser" (click)="deleteComment(comment.idcomment)">delete</mat-icon>
+    </mat-card>
+    <h3>New comment</h3>
+    <mat-form-field appearance="fill">
+        <mat-label>Content</mat-label>
+        <input matInput [(ngModel)]="commentContent">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="newComment()">Comment</button>
+</div>

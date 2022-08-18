@@ -1,0 +1,34 @@
+<div fxLayout="column" fxLayoutGap="1em">
+    <h1>{{title}}</h1>
+    <mat-card *ngFor="let segment of segments">
+        <app-image *ngIf="segment.type == 'img'" [segment]="segment" (removeNodeEvent)="segmentModified($event)"></app-image>
+        <app-text *ngIf="segment.type == 'p'" [segment]="segment" (removeNodeEvent)="segmentModified($event)"></app-text>
+        <app-hyperlink *ngIf="segment.type == 'a'" [segment]="segment" (removeNodeEvent)="segmentModified($event)">
+        </app-hyperlink>
+    </mat-card>
+
+    <app-new-image *ngIf="addingSegment=='image'" (addNodeEvent)="segmentModified($event)" [postId]="postId"></app-new-image>
+    <app-new-text *ngIf="addingSegment=='text'" (addNodeEvent)="segmentModified($event)" [postId]="postId"></app-new-text>
+    <app-new-hyperlink *ngIf="addingSegment=='hyperlink'" (addNodeEvent)="segmentModified($event)" [postId]="postId">
+    </app-new-hyperlink>
+
+    <button *ngIf="userRole ==='admin'" mat-fab color="primary" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>add</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="newText()">
+            <mat-icon>description</mat-icon>
+            <span>Add text</span>
+        </button>
+        <button mat-menu-item (click)="newLink()">
+            <mat-icon>link</mat-icon>
+            <span>Add link</span>
+        </button>
+        <button mat-menu-item (click)="newImage()">
+            <mat-icon>image</mat-icon>
+            <span>Add image</span>
+        </button>
+    </mat-menu>
+    <app-post-comment-section [postId]="postId"></app-post-comment-section>
+
+</div>

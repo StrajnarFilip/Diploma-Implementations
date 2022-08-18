@@ -1,0 +1,15 @@
+<div fxLayout="column" fxLayoutGap="1em">
+    <mat-card *ngFor="let post of allPosts">
+        <mat-card-content routerLink="/post/{{post.idpost}}">
+            {{post.title}}
+        </mat-card-content>
+        <mat-icon *ngIf="userRole === 'admin'" (click)="deletePost(post.idpost)">delete</mat-icon>
+    </mat-card>
+    <div fxLayout="column" *ngIf="userRole === 'admin'">
+        <mat-form-field appearance="fill">
+            <mat-label>New title</mat-label>
+            <input matInput [(ngModel)]="newTitle">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="newPost()">Create new post</button>
+    </div>
+</div>

@@ -1,0 +1,3 @@
+<a *ngIf="segment" [href]="segment.source">{{segment.text}}</a>
+<br>
+<mat-icon (click)="delete()" *ngIf="userRole ==='admin'">delete</mat-icon>

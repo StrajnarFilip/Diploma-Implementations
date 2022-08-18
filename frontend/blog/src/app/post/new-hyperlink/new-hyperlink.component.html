@@ -1,0 +1,12 @@
+<p>New link</p>
+<mat-form-field appearance="fill">
+    <mat-label>Text</mat-label>
+    <input matInput [(ngModel)]="linkText">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>Link</mat-label>
+    <input matInput [(ngModel)]="linkHref">
+</mat-form-field>
+<br>
+<button mat-raised-button color="primary" (click)='submit()'>Submit</button>

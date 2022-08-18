@@ -1,0 +1,12 @@
+<p>New image</p>
+<mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput [(ngModel)]="imageDescription">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>Source</mat-label>
+    <input matInput [(ngModel)]="imageSource">
+</mat-form-field>
+<br>
+<button mat-raised-button color="primary" (click)="addNewImage()">Submit</button>

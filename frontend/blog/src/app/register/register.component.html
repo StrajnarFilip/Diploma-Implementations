@@ -1,0 +1,12 @@
+<p>Register new account</p>
+<mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="email">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput [(ngModel)]="password">
+</mat-form-field>
+<br>
+<button mat-raised-button color="primary" (click)="submit()">Register</button>

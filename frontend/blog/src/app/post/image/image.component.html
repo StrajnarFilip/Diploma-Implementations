@@ -1,0 +1,3 @@
+<img *ngIf="segment" [src]="segment.source" />
+<br>
+<mat-icon (click)="delete()" *ngIf="userRole ==='admin'">delete</mat-icon>
