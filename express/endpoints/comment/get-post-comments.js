@@ -22,7 +22,7 @@ function getPostComments(app) {
                     }
                 }
             });
-            const reshapedComments = comments.map(comment => {
+            const reshapedComments = comments.map((comment) => {
                 if (comment.idcomment !== null &&
                     comment.post_idpost !== null &&
                     comment.user_iduser !== null) {

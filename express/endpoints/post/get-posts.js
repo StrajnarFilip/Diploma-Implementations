@@ -14,7 +14,7 @@ const utility_1 = require("../../utility");
 function getPosts(app) {
     app.get("/posts", (req, res) => __awaiter(this, void 0, void 0, function* () {
         const allPosts = yield utility_1.prismaClient.post.findMany({});
-        const selected = allPosts.map(post => {
+        const selected = allPosts.map((post) => {
             return {
                 idpost: (0, utility_1.bigIntToNumber)(post.idpost),
                 title: post.title

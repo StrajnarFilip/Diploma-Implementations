@@ -22,7 +22,7 @@ function getSegments(app) {
                     }
                 }
             });
-            const reshapedSegments = segments.map(segment => {
+            const reshapedSegments = segments.map((segment) => {
                 return {
                     idsegment: (0, utility_1.bigIntToNumber)(segment.idsegment),
                     postIdpost: (0, utility_1.bigIntToNumber)(segment.post_idpost),
