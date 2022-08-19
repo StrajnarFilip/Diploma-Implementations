@@ -49,9 +49,8 @@ public class Post {
             if (!userData.getUserInformation(token).isAdmin()) {
                 return new ResponseEntity(HttpStatus.UNAUTHORIZED);
             }
-            postData.addPost(post.getTitle());
-            // TODO: no hardcoded ID value
-            return ResponseEntity.ok(new Id(1l));
+            Long createdId = postData.addPost(post.getTitle());
+            return ResponseEntity.ok(new Id(createdId));
         } catch (Exception e) {
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }

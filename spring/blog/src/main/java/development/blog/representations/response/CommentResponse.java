@@ -1,18 +1,18 @@
-package development.blog.representations.request;
+package development.blog.representations.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Comment {
+public class CommentResponse {
     Long idComment;
     String content;
-    Long postId;
-    Long userId;
+    Long postIdPost;
+    Long userIdUser;
 
-    public Comment(Long idComment, String content, Long postId, Long userId) {
+    public CommentResponse(Long idComment, String content, Long postIdPost, Long userIdUser) {
         this.idComment = idComment;
         this.content = content;
-        this.postId = postId;
-        this.userId = userId;
+        this.postIdPost = postIdPost;
+        this.userIdUser = userIdUser;
     }
 
     @JsonProperty("idcomment")
@@ -26,12 +26,12 @@ public class Comment {
     }
 
     @JsonProperty("postIdpost")
-    public Long getPostId() {
-        return postId;
+    public Long getPostIdPost() {
+        return postIdPost;
     }
 
     @JsonProperty("userIduser")
-    public Long getUserId() {
-        return userId;
+    public Long getUserIdUser() {
+        return userIdUser;
     }
 }
