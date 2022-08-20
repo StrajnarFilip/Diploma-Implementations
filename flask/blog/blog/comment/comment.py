@@ -1,5 +1,6 @@
 # pyright: reportUnusedFunction=false
 from flask import Flask
+from comment import comment_logic
 
 def comment_routes(app: Flask):
     @app.route("/post-comments/<int:post_id>",methods=["GET"])
@@ -8,7 +9,7 @@ def comment_routes(app: Flask):
 
     @app.route("/comment",methods=["POST"])
     def new_comment():
-        return ""
+        return comment_logic.new_comment()
 
     @app.route("/comment/<int:id>",methods=["DELETE"])
     def delete_comment(id: int):

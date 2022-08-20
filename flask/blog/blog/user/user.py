@@ -1,4 +1,5 @@
 # pyright: reportUnusedFunction=false
+from typing import Any
 from flask import Flask
 from flask import request
 from user import user_logic
@@ -9,8 +10,8 @@ def user_routes(app: Flask):
         return ""
 
     @app.route("/login",methods=["POST"])
-    def login():
-        return ""
+    def login()-> tuple[Any,int]:
+        return user_logic.login(request.json)
 
     @app.route("/register",methods=["POST"])
     def register():

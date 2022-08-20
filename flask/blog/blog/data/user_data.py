@@ -1,3 +1,4 @@
+from typing import Any
 from data import database
 from hashlib import sha256
 
@@ -17,5 +18,17 @@ def register(email: str,password: str)-> bool:
     else:
         return False
 
-def user_info(token: str):
-    pass
+def user_info(token: str) -> Any:
+    return database.find_single(
+        "SELECT iduser,email,role FROM public.user WHERE cookie=%s;",
+        [token])
+
+def user_id_login(email:str,password: str)-> int:
+    return database.find_single(
+        "SELECT iduser FROM public.user WHERE email=%s AND password=%s;",
+        [email,_sha256_hash(password)])[0]
+
+def set_user_token(user_id: int,new_token: str):
+    database.insert_data(
+        "UPDATE public.user SET cookie=%s WHERE iduser=%s;",
+        [new_token,str(user_id)])
