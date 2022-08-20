@@ -1,3 +1,4 @@
+# pyright: reportUnusedFunction=false
 from flask import Flask
 
 def segment_routes(app: Flask):

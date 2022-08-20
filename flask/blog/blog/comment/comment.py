@@ -1,3 +1,4 @@
+# pyright: reportUnusedFunction=false
 from flask import Flask
 
 def comment_routes(app: Flask):
