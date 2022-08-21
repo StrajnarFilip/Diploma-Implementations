@@ -23,9 +23,10 @@ public class SegmentData {
     }
 
     public ArrayList<SegmentResponse> segmentsOfPost(Long id) throws SQLException {
-        final String sql = "SELECT idsegment,post_idpost,type,text,source FROM public.segment;";
+        final String sql = "SELECT idsegment,post_idpost,type,text,source FROM public.segment WHERE post_idpost=?;";
         PreparedStatement statement =
                 this.connection.prepareStatement(sql);
+        statement.setLong(1,id);
         ResultSet rs = statement.executeQuery();
         ArrayList<SegmentResponse> segments = new ArrayList<SegmentResponse>();
 
