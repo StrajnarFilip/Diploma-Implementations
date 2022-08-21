@@ -1,7 +1,6 @@
 package development.blog.controllers;
 
 import development.blog.logic.Segment;
-import development.blog.representations.request.NewPost;
 import development.blog.representations.request.NewSegment;
 import development.blog.representations.response.Id;
 import development.blog.representations.response.SegmentResponse;

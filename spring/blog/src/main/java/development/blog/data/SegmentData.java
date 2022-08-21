@@ -2,7 +2,6 @@ package development.blog.data;
 
 import development.blog.logic.User;
 import development.blog.representations.request.NewSegment;
-import development.blog.representations.response.PostResponse;
 import development.blog.representations.response.SegmentResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

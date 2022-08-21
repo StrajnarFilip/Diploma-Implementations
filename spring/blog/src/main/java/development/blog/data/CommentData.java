@@ -70,7 +70,6 @@ public class CommentData {
 
     public void deleteComment(Long commentId, Long userId) throws SQLException {
         final String sql = "DELETE FROM public.comment where idcomment=? AND user_iduser=?;";
-        System.out.println(sql);
         PreparedStatement statement =
                 this.connection.prepareStatement(sql);
         statement.setLong(1, commentId);
