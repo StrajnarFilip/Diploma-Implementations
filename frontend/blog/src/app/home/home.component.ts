@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     if (this.storage.token == null || !(this.storage.token.length == 64)) {
       this.router.navigate(["login"])
-      console.log("ACTIVATE")
     }
 
     this.api.UserInfo().subscribe({
