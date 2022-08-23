@@ -48,7 +48,7 @@ namespace MvcMovie.Controllers
         }
 
         [HttpDelete("/post/{id}")]
-        public async Task<ActionResult<String>> DeletePost([FromRoute] long id)
+        public async Task<ActionResult<IdResponse>> DeletePost([FromRoute] long id)
         {
             var context = postgresContext.DefaultContext;
             if (!Authentication.UserIsAdmin(context, this))
@@ -64,7 +64,7 @@ namespace MvcMovie.Controllers
             context.Segments.RemoveRange(nodesToDelete);
             context.Posts.Remove(postToDelete);
             await context.SaveChangesAsync();
-            return Ok("Deleted");
+            return Ok(new IdResponse { Id = id });
         }
     }
 }
