@@ -104,7 +104,7 @@ export class ApiService {
     if (this.storage.token === null) {
       throw Error("Token is null")
     }
-    return this.http.delete(`${this.baseAddress}/post/${deletePostId}`,
+    return this.http.delete<IdResponse>(`${this.baseAddress}/post/${deletePostId}`,
       { headers: { Authorization: this.storage.token } })
 
   }
