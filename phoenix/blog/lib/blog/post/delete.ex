@@ -12,7 +12,7 @@ defmodule Blog.Post.Delete do
 
     case Blog.Repo.get(Schema.Post, post_id)
          |> Blog.Repo.delete() do
-      {:ok, _} -> "Post has been deleted"
+      {:ok, _} -> %{id: post_id}
       _ -> "Failed to delete post"
     end
   end
