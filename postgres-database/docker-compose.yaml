@@ -27,7 +27,6 @@ services:
       #- 0.0.0.0:5432:5432
     volumes:
       - ./postgres:/var/lib/postgresql/data
-      - ./script:/script
 
   pgadmin:
     networks:
