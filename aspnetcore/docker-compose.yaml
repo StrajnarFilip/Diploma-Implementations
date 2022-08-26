@@ -1,6 +1,0 @@
-version: '2.2'
-services:
-  aspnetcore:
-    build: .
-    ports:
-      - "7000:7000"
