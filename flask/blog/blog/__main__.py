@@ -14,4 +14,4 @@ segment_routes(app)
 post_routes(app)
 user_routes(app)
 
-app.run(debug=True,port=7000)
+app.run(port=7000)

@@ -1,0 +1,10 @@
+{
+  "simulation": "ViewSimulation",
+  "simulationId": "viewsimulation-20220827203608793",
+  "start": 1661632569497,
+  "description": "Spring - Java",
+  "scenarios": ["ViewSimulation"],
+  "assertions": [
+
+  ]
+}
