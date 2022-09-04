@@ -1,7 +1,7 @@
 {
   "simulation": "ViewSimulation",
-  "simulationId": "viewsimulation-20220827202942294",
-  "start": 1661632183077,
+  "simulationId": "viewsimulation-20220904162602642",
+  "start": 1662308763371,
   "description": "Phoenix - Elixir",
   "scenarios": ["ViewSimulation"],
   "assertions": [
