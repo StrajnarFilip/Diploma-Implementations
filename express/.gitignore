@@ -1,2 +1,4 @@
 node_modules
 # Keep environment variables out of version control
+build-files
+output-app.js
