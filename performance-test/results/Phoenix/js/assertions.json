@@ -1,9 +1,9 @@
 {
-  "simulation": "ViewSimulation",
-  "simulationId": "viewsimulation-20220904162602642",
-  "start": 1662308763371,
-  "description": "Phoenix - Elixir",
-  "scenarios": ["ViewSimulation"],
+  "simulation": "DiplomaSimulation",
+  "simulationId": "diplomasimulation-20220905193057320",
+  "start": 1662406258122,
+  "description": "Framework: Phoenix (Elixir)",
+  "scenarios": ["DiplomaSimulation"],
   "assertions": [
 
   ]

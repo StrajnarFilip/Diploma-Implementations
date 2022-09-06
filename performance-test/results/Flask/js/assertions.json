@@ -1,9 +1,9 @@
 {
-  "simulation": "ViewSimulation",
-  "simulationId": "viewsimulation-20220827202642136",
-  "start": 1661632003167,
-  "description": "Flask - Python",
-  "scenarios": ["ViewSimulation"],
+  "simulation": "DiplomaSimulation",
+  "simulationId": "diplomasimulation-20220905210811529",
+  "start": 1662412092607,
+  "description": "Framework: Flask (Python)",
+  "scenarios": ["DiplomaSimulation"],
   "assertions": [
 
   ]

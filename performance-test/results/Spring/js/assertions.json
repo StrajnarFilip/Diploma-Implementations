@@ -1,9 +1,9 @@
 {
-  "simulation": "ViewSimulation",
-  "simulationId": "viewsimulation-20220827203608793",
-  "start": 1661632569497,
-  "description": "Spring - Java",
-  "scenarios": ["ViewSimulation"],
+  "simulation": "DiplomaSimulation",
+  "simulationId": "diplomasimulation-20220905190244152",
+  "start": 1662404564905,
+  "description": "Framework: Spring (Java)",
+  "scenarios": ["DiplomaSimulation"],
   "assertions": [
 
   ]

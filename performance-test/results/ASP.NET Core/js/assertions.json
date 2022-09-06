@@ -1,9 +1,9 @@
 {
-  "simulation": "ViewSimulation",
-  "simulationId": "viewsimulation-20220827203342557",
-  "start": 1661632423389,
-  "description": "ASP.NET - C#",
-  "scenarios": ["ViewSimulation"],
+  "simulation": "DiplomaSimulation",
+  "simulationId": "diplomasimulation-20220905190433821",
+  "start": 1662404674581,
+  "description": "Framework: ASP.NET Core (C#)",
+  "scenarios": ["DiplomaSimulation"],
   "assertions": [
 
   ]
