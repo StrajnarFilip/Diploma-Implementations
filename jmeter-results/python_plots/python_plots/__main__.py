@@ -39,3 +39,4 @@ plt.savefig("test.png",dpi=1000,format="png")
 
 for label in labels:
     singleplot.single_box_plot(label)
+    singleplot.single_violin_plot(label)
